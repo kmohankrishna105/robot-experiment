@@ -26,7 +26,9 @@ click on first search item
     wait until page contains  Back to search
 
 Get price of First product
+
     ${get_price}=  get text  priceblock_ourprice
+    ${new_variable} =  set variable  New variable for second changes
     log  ${get_price}
 
 Adding item to cart
