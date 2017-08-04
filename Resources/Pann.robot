@@ -4,7 +4,7 @@ Library  Dialogs
 *** Keywords ***
 
 Open website
-    ${sectestcase_variable} =  set variable  jio merey laal hero 111
+    ${sectestcase_variable} =  set variable  jio merey laal hero 111 222
     log  ${sectestcase_variable}
 
     #OPEN BROWSER  http://www.amazon.com  chrome
