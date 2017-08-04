@@ -6,7 +6,7 @@ Resource  ../Resources/Pann.robot
 *** Test Cases ***
 User must sign in first
 #[Documentation] this is a amazon verification
-#[Tags]Use case
+#[Tags]Use case Amemded
   Pann.Open website
 
   Pann.Enter search criteria

@@ -1,13 +1,13 @@
 r*** Settings ***
 
 *** Variables ***
-${scelar_x} =  q
+${scelar_x} =  r
 @{list_y} =  1  2  This is list
 &{dic_keyvalue}  q=yahoo  w=rediff  e=wikipedia  r=google
 
 *** Keywords ***
 Value display
-  [Tags]  value display-Keyword
+  [Tags]  value display-Keyword  Tag for First edit
     log  ${scelar_x}
 
     log  @{list_y}[1]
