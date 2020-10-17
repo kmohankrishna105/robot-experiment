@@ -2,6 +2,7 @@
 Library  Selenium2Library
 
 
+
 *** Variables ***
 ${variable_s} =  This is a variable
 

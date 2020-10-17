@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170727 16:55:34.418" generator="Robot 3.0.2 (Python 2.7.8 on win32)">
-<suite source="C:\Users\mkottakk\PycharmProjects\robot\Amazon.robot" id="s1" name="Amazon">
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201002 22:08:47.128" rpa="false">
+<suite id="s1" name="Amazon" source="C:\Users\Dell\PycharmProjects\robot-experiment\Amazon.robot">
 <test id="s1-t1" name="Open website">
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${variable_s}</arg>
 </arguments>
-<msg timestamp="20170727 16:55:34.619" level="INFO">This is a variable</msg>
-<status status="PASS" endtime="20170727 16:55:34.619" starttime="20170727 16:55:34.619"></status>
+<msg timestamp="20201002 22:08:47.217" level="INFO">This is a variable</msg>
+<status status="PASS" starttime="20201002 22:08:47.216" endtime="20201002 22:08:47.217"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -18,277 +18,118 @@
 <assign>
 <var>${sectestcase_variable}</var>
 </assign>
-<msg timestamp="20170727 16:55:34.619" level="INFO">${sectestcase_variable} = jio merey laal</msg>
-<status status="PASS" endtime="20170727 16:55:34.619" starttime="20170727 16:55:34.619"></status>
+<msg timestamp="20201002 22:08:47.219" level="INFO">${sectestcase_variable} = jio merey laal</msg>
+<status status="PASS" starttime="20201002 22:08:47.218" endtime="20201002 22:08:47.219"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${sectestcase_variable}</arg>
 </arguments>
-<msg timestamp="20170727 16:55:34.619" level="INFO">jio merey laal</msg>
-<status status="PASS" endtime="20170727 16:55:34.619" starttime="20170727 16:55:34.619"></status>
+<msg timestamp="20201002 22:08:47.220" level="INFO">jio merey laal</msg>
+<status status="PASS" starttime="20201002 22:08:47.220" endtime="20201002 22:08:47.220"></status>
 </kw>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<kw name="OPEN BROWSER">
 <arguments>
 <arg>http://www.amazon.com</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20170727 16:55:34.619" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'</msg>
-<status status="PASS" endtime="20170727 16:55:41.107" starttime="20170727 16:55:34.619"></status>
+<msg timestamp="20201002 22:08:47.225" level="FAIL">No keyword with name 'OPEN BROWSER' found.</msg>
+<status status="FAIL" starttime="20201002 22:08:47.225" endtime="20201002 22:08:47.225"></status>
 </kw>
-<status status="PASS" endtime="20170727 16:55:41.132" critical="yes" starttime="20170727 16:55:34.619"></status>
+<status status="FAIL" starttime="20201002 22:08:47.215" endtime="20201002 22:08:47.226" critical="yes">No keyword with name 'OPEN BROWSER' found.</status>
 </test>
 <test id="s1-t2" name="Enter search criteria">
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
+<kw name="input text">
 <arguments>
 <arg>twotabsearchtextbox</arg>
 <arg>Iphone</arg>
 </arguments>
-<msg timestamp="20170727 16:55:41.152" level="INFO">Typing text 'Iphone' into text field 'twotabsearchtextbox'</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170727 16:55:41.167" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.167" starttime="20170727 16:55:41.159"></status>
+<msg timestamp="20201002 22:08:47.232" level="FAIL">No keyword with name 'input text' found.</msg>
+<status status="FAIL" starttime="20201002 22:08:47.232" endtime="20201002 22:08:47.232"></status>
 </kw>
-<msg timestamp="20170727 16:55:41.167" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.182" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.182" starttime="20170727 16:55:41.152"></status>
-</kw>
-<status status="FAIL" endtime="20170727 16:55:41.182" critical="yes" starttime="20170727 16:55:41.152">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</status>
+<status status="FAIL" starttime="20201002 22:08:47.227" endtime="20201002 22:08:47.233" critical="yes">No keyword with name 'input text' found.</status>
 </test>
 <test id="s1-t3" name="click on submit">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
+<kw name="click button">
 <arguments>
 <arg>xpath=//input[@type="submit"]</arg>
 </arguments>
-<msg timestamp="20170727 16:55:41.182" level="INFO">Clicking button 'xpath=//input[@type="submit"]'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170727 16:55:41.198" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.198" starttime="20170727 16:55:41.182"></status>
+<msg timestamp="20201002 22:08:47.240" level="FAIL">No keyword with name 'click button' found.</msg>
+<status status="FAIL" starttime="20201002 22:08:47.240" endtime="20201002 22:08:47.241"></status>
 </kw>
-<msg timestamp="20170727 16:55:41.198" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.198" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.198" starttime="20170727 16:55:41.182"></status>
-</kw>
-<status status="FAIL" endtime="20170727 16:55:41.198" critical="yes" starttime="20170727 16:55:41.182">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</status>
+<status status="FAIL" starttime="20201002 22:08:47.236" endtime="20201002 22:08:47.241" critical="yes">No keyword with name 'click button' found.</status>
 </test>
 <test id="s1-t4" name="click on first search item">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
+<kw name="click element">
 <arguments>
 <arg>xpath=//*[@id="result_0"]/div/div/div/div[2]/div[1]/div[1]/a/h2</arg>
 </arguments>
-<msg timestamp="20170727 16:55:41.219" level="INFO">Clicking element 'xpath=//*[@id="result_0"]/div/div/div/div[2]/div[1]/div[1]/a/h2'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170727 16:55:41.219" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.219" starttime="20170727 16:55:41.219"></status>
+<msg timestamp="20201002 22:08:47.248" level="FAIL">No keyword with name 'click element' found.</msg>
+<status status="FAIL" starttime="20201002 22:08:47.248" endtime="20201002 22:08:47.248"></status>
 </kw>
-<msg timestamp="20170727 16:55:41.219" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.234" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.234" starttime="20170727 16:55:41.216"></status>
-</kw>
-<status status="FAIL" endtime="20170727 16:55:41.234" critical="yes" starttime="20170727 16:55:41.214">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</status>
+<status status="FAIL" starttime="20201002 22:08:47.243" endtime="20201002 22:08:47.258" critical="yes">No keyword with name 'click element' found.</status>
 </test>
 <test id="s1-t5" name="Get price of First product">
-<kw name="Get Text" library="Selenium2Library">
-<doc>Returns the text value of element identified by `locator`.</doc>
+<kw name="get text">
 <arguments>
 <arg>priceblock_ourprice</arg>
 </arguments>
 <assign>
-<var>${get_price}</var>
+<var>${get_price}=</var>
 </assign>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170727 16:55:41.265" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.265" starttime="20170727 16:55:41.250"></status>
+<msg timestamp="20201002 22:08:47.264" level="FAIL">No keyword with name 'get text' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20201002 22:08:47.264" endtime="20201002 22:08:47.265"></status>
 </kw>
-<msg timestamp="20170727 16:55:41.265" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.265" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.265" starttime="20170727 16:55:41.234"></status>
-</kw>
-<status status="FAIL" endtime="20170727 16:55:41.265" critical="yes" starttime="20170727 16:55:41.234">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</status>
+<status status="FAIL" starttime="20201002 22:08:47.260" endtime="20201002 22:08:47.265" critical="yes">No keyword with name 'get text' found. Did you mean:
+    BuiltIn.Get Time</status>
 </test>
 <test id="s1-t6" name="Adding item to cart">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
+<kw name="click button">
 <arguments>
 <arg>add-to-cart-button</arg>
 </arguments>
-<msg timestamp="20170727 16:55:41.265" level="INFO">Clicking button 'add-to-cart-button'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170727 16:55:41.281" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.281" starttime="20170727 16:55:41.265"></status>
+<msg timestamp="20201002 22:08:47.276" level="FAIL">No keyword with name 'click button' found.</msg>
+<status status="FAIL" starttime="20201002 22:08:47.275" endtime="20201002 22:08:47.276"></status>
 </kw>
-<msg timestamp="20170727 16:55:41.281" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.281" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.281" starttime="20170727 16:55:41.265"></status>
-</kw>
-<status status="FAIL" endtime="20170727 16:55:41.281" critical="yes" starttime="20170727 16:55:41.265">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</status>
+<status status="FAIL" starttime="20201002 22:08:47.270" endtime="20201002 22:08:47.277" critical="yes">No keyword with name 'click button' found.</status>
 </test>
 <test id="s1-t7" name="Get title from the window">
-<kw name="Get Title" library="Selenium2Library">
-<doc>Returns title of current page.</doc>
+<kw name="get title">
 <assign>
-<var>${hai}</var>
+<var>${hai} =</var>
 </assign>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170727 16:55:41.297" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.297" starttime="20170727 16:55:41.297"></status>
+<msg timestamp="20201002 22:08:47.286" level="FAIL">No keyword with name 'get title' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20201002 22:08:47.286" endtime="20201002 22:08:47.286"></status>
 </kw>
-<msg timestamp="20170727 16:55:41.297" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.297" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170727 16:55:41.297" starttime="20170727 16:55:41.281"></status>
-</kw>
-<status status="FAIL" endtime="20170727 16:55:41.297" critical="yes" starttime="20170727 16:55:41.281">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</status>
+<status status="FAIL" starttime="20201002 22:08:47.281" endtime="20201002 22:08:47.287" critical="yes">No keyword with name 'get title' found. Did you mean:
+    BuiltIn.Get Time</status>
 </test>
-<status status="FAIL" endtime="20170727 16:55:41.312" starttime="20170727 16:55:34.421"></status>
+<status status="FAIL" starttime="20201002 22:08:47.140" endtime="20201002 22:08:47.289"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="6" pass="1">Critical Tests</stat>
-<stat fail="6" pass="1">All Tests</stat>
+<stat pass="0" fail="7">Critical Tests</stat>
+<stat pass="0" fail="7">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="6" id="s1" name="Amazon" pass="1">Amazon</stat>
+<stat pass="0" fail="7" id="s1" name="Amazon">Amazon</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20170727 16:55:41.167" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.198" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.219" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.265" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.281" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170727 16:55:41.297" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
+<msg timestamp="20201002 22:08:47.212" level="ERROR">Error in file 'C:\Users\Dell\PycharmProjects\robot-experiment\Amazon.robot' on line 2: Importing test library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Dell\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
+  c:\users\dell\appdata\local\programs\python\python38-32\python38.zip
+  c:\users\dell\appdata\local\programs\python\python38-32\DLLs
+  c:\users\dell\appdata\local\programs\python\python38-32\lib
+  c:\users\dell\appdata\local\programs\python\python38-32
+  c:\users\dell\appdata\local\programs\python\python38-32\lib\site-packages</msg>
 </errors>
 </robot>

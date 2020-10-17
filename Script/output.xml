@@ -1,139 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170801 17:41:29.596" generator="Robot 3.0.2 (Python 2.7.8 on win32)">
-<suite source="c:\Users\mkottakk\PycharmProjects\robot\Script\script.robot" id="s1" name="Script">
+<robot generator="Robot 3.1.1 (Python 3.8.5 on win32)" generated="20201014 22:45:15.358" rpa="false">
+<suite id="s1" name="Script" source="C:\Users\Dell\PycharmProjects\robot-experiment\Script\script.robot">
 <test id="s1-t1" name="User must sign in first">
 <kw name="Open website" library="Pann">
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
 <arguments>
-<arg>jio merey laal</arg>
+<arg>jio merey laal hero 111 222</arg>
 </arguments>
 <assign>
 <var>${sectestcase_variable}</var>
 </assign>
-<msg timestamp="20170801 17:41:30.061" level="INFO">${sectestcase_variable} = jio merey laal</msg>
-<status status="PASS" endtime="20170801 17:41:30.061" starttime="20170801 17:41:30.061"></status>
+<msg timestamp="20201014 22:45:16.746" level="INFO">${sectestcase_variable} = jio merey laal hero 111 222</msg>
+<status status="PASS" starttime="20201014 22:45:16.745" endtime="20201014 22:45:16.746"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${sectestcase_variable}</arg>
 </arguments>
-<msg timestamp="20170801 17:41:30.064" level="INFO">jio merey laal</msg>
-<status status="PASS" endtime="20170801 17:41:30.064" starttime="20170801 17:41:30.061"></status>
+<msg timestamp="20201014 22:45:16.747" level="INFO">jio merey laal hero 111 222</msg>
+<status status="PASS" starttime="20201014 22:45:16.746" endtime="20201014 22:45:16.747"></status>
 </kw>
-<kw name="Get Selection From User" library="Dialogs">
-<doc>Pauses test execution and asks user to select a value.</doc>
-<arguments>
-<arg>Which browser?</arg>
-<arg>chrome</arg>
-<arg>ie</arg>
-<arg>firefox</arg>
-</arguments>
+<kw name="create request payload">
 <assign>
-<var>${Broswer_selection}</var>
+<var>${request_payload} =</var>
 </assign>
-<msg timestamp="20170801 17:41:41.221" level="INFO">${Broswer_selection} = chrome</msg>
-<status status="PASS" endtime="20170801 17:41:41.221" starttime="20170801 17:41:30.064"></status>
+<msg timestamp="20201014 22:45:16.760" level="FAIL">No keyword with name 'create request payload' found.</msg>
+<status status="FAIL" starttime="20201014 22:45:16.760" endtime="20201014 22:45:16.760"></status>
 </kw>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>http://www.amazon.com</arg>
-<arg>${Broswer_selection}</arg>
-</arguments>
-<msg timestamp="20170801 17:41:41.221" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'</msg>
-<status status="PASS" endtime="20170801 17:46:09.159" starttime="20170801 17:41:41.221"></status>
+<status status="FAIL" starttime="20201014 22:45:16.745" endtime="20201014 22:45:16.761"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>twotabsearchtextbox</arg>
-</arguments>
-<status status="PASS" endtime="20170801 17:46:20.171" starttime="20170801 17:46:09.161"></status>
-</kw>
-<status status="PASS" endtime="20170801 17:46:20.171" starttime="20170801 17:41:30.061"></status>
-</kw>
-<kw name="Enter search criteria" library="Pann">
-<kw name="Get Value From User" library="Dialogs">
-<doc>Pauses test execution and asks user to input a value.</doc>
-<arguments>
-<arg>Search string please!:</arg>
-</arguments>
-<assign>
-<var>${search_criteria}</var>
-</assign>
-<msg timestamp="20170801 17:46:36.903" level="INFO">${search_criteria} = samsung</msg>
-<status status="PASS" endtime="20170801 17:46:36.903" starttime="20170801 17:46:20.187"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>twotabsearchtextbox</arg>
-<arg>${search_criteria}</arg>
-</arguments>
-<msg timestamp="20170801 17:46:36.903" level="INFO">Typing text 'samsung' into text field 'twotabsearchtextbox'</msg>
-<status status="PASS" endtime="20170801 17:46:37.112" starttime="20170801 17:46:36.903"></status>
-</kw>
-<status status="PASS" endtime="20170801 17:46:37.112" starttime="20170801 17:46:20.187"></status>
-</kw>
-<kw name="click on submit" library="Pann">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//input[@type="submit"]</arg>
-</arguments>
-<msg timestamp="20170801 17:46:37.112" level="INFO">Clicking button 'xpath=//input[@type="submit"]'.</msg>
-<status status="PASS" endtime="20170801 17:47:58.606" starttime="20170801 17:46:37.112"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>results for</arg>
-</arguments>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170801 17:48:08.751" level="FAIL">WebDriverException: Message: chrome not reachable
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170801 17:48:08.751" starttime="20170801 17:48:04.624"></status>
-</kw>
-<msg timestamp="20170801 17:48:08.751" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<msg timestamp="20170801 17:48:08.767" level="FAIL">WebDriverException: Message: chrome not reachable
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
-<status status="FAIL" endtime="20170801 17:48:08.767" starttime="20170801 17:47:58.606"></status>
-</kw>
-<status status="FAIL" endtime="20170801 17:48:08.767" starttime="20170801 17:46:37.112"></status>
-</kw>
-<status status="FAIL" endtime="20170801 17:48:08.767" critical="yes" starttime="20170801 17:41:30.061">WebDriverException: Message: chrome not reachable
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</status>
+<status status="FAIL" starttime="20201014 22:45:16.743" endtime="20201014 22:45:16.761" critical="yes">No keyword with name 'create request payload' found.</status>
 </test>
 <doc>Script file to be initiated</doc>
-<status status="FAIL" endtime="20170801 17:48:08.767" starttime="20170801 17:41:29.601"></status>
+<status status="FAIL" starttime="20201014 22:45:15.362" endtime="20201014 22:45:16.763"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Script" pass="0">Script</stat>
+<stat pass="0" fail="1" id="s1" name="Script">Script</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20170801 17:48:08.751" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
-</msg>
+<msg timestamp="20201014 22:45:16.741" level="ERROR">Error in file 'C:\Users\Dell\PycharmProjects\robot-experiment\Script\script.robot': Resource file '..\Resources\Create_Request_Payload.py' does not exist.</msg>
 </errors>
 </robot>

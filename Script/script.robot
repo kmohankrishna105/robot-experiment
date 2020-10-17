@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  Script file to be initiated
 Resource  ../Resources/Pann.robot
-
+Resource  ../Resources/Create_Request_Payload.py
 
 *** Test Cases ***
 User must sign in first
