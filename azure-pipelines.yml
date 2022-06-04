@@ -7,7 +7,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+-  azure-pipelines-ROBOT
 
 pool:
 -  vmImage: ubuntu-latest
